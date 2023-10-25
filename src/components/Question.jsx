@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Result from "./Results";
 
-const baseURL = "https://opentdb.com/api.php?amount=10&category=15&type=multiple";
+const baseURL = "https://opentdb.com/api.php?amount=5&type=multiple";
 
 const Question = () => {
  
@@ -14,20 +14,6 @@ const Question = () => {
   const [correctAnswers, setCorrectAnswers] = useState(0); 
   const [totalQuestions, setTotalQuestions] = useState(0); 
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
-
-
-  
-//   useEffect(() => {
-//     axios
-//       .get(baseURL)
-//       .then((response) => {
-//         setQuiz(response.data.results);
-//         setTotalQuestions(response.data.results.length);
-//       })
-//       .catch((error) => {
-//         console.error("Error fetching data:", error);
-//       });
-//   }, []);
 
 useEffect(() => {
     axios
@@ -90,10 +76,8 @@ useEffect(() => {
               style={{
                 backgroundColor: selectedAnswer === answer ? (answer === currentQuestion.correct_answer ? "lightgreen" : "red") : " ",
                 border: "2px solid black",
-                marginLeft:"auto",
-                marginRight:"auto",
                 borderRadius: "20px",
-                margin:"10px",
+                margin:"auto 10px",
                 height: "auto",
                 padding: "20px 20px"
               }}
@@ -122,6 +106,12 @@ useEffect(() => {
   
   export default Question;
   
+
+
+
+
+
+
 
 
 
