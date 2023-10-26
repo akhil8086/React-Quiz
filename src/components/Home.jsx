@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import Question from './Question';
+import "./Styles.css"
 
 function Home() {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -13,26 +14,17 @@ function Home() {
   };
 
   return (
-    <div style={{ marginTop: "200px" }}>
+    <div className='home'>
       {quizStarted ? (
    
         <Question />
       ) : (
        
         <div>
-          <h1 style={{ fontSize: "30px", color: "black", fontFamily:"bold" }}>WELCOME</h1>
+          <h1 className='home_one'>WELCOME</h1>
           <div>
             <button
-              style={{
-                border: "2px solid black",
-                background: "lightgreen",
-                margin: "50px",
-                fontSize: "20px",
-                padding: "30px 40px",
-                borderRadius:"15px",
-                color:"black"
-
-              }}
+            className='home_button'
               onClick={startQuiz} 
             >
               Start Quiz
