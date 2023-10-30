@@ -16,6 +16,7 @@ const Result = ({ correctAnswers, totalQuestions }) => {
 
       <button
       onClick={refreshPage}
+      className="Result_button"
       >
         Play Again
       </button>

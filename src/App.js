@@ -6,7 +6,7 @@ import Home from './components/Home';
 function App() {
   return (
     <div style={{textAlign:"center"}}>
-      <h1>Trivia Quiz</h1>
+      <h1 style={{color:"white"}}>Trivia Quiz</h1>
       <Home />
     </div>
   );
